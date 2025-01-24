@@ -1,0 +1,174 @@
+@font-face {
+    font-family: __materialIconsOutlined_4652df;
+    src: url(https://reviews.static.gartner.com/_next/static/media/8291221fb636cd98.p.woff2) format("woff2");
+    font-display: block
+}
+
+.__className_4652df {
+    font-family: __materialIconsOutlined_4652df
+}
+
+.__variable_4652df {
+    --material-icons-outlined: "__materialIconsOutlined_4652df"
+}
+
+@font-face {
+    font-family: __graphikRegular_64a880;
+    src: url(https://reviews.static.gartner.com/_next/static/media/825583c72de2792d-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: __graphikRegular_Fallback_64a880;
+    src: local("Arial");
+    ascent-override: 92.25%;
+    descent-override: 18.34%;
+    line-gap-override: 0.00%;
+    size-adjust: 106.34%
+}
+
+.__className_64a880 {
+    font-family: __graphikRegular_64a880, __graphikRegular_Fallback_64a880, Arial;
+    font-weight: 400;
+    font-style: normal
+}
+
+.__variable_64a880 {
+    --graphik-regular: "__graphikRegular_64a880", "__graphikRegular_Fallback_64a880", Arial
+}
+
+@font-face {
+    font-family: __graphikMedium_28a71b;
+    src: url(https://reviews.static.gartner.com/_next/static/media/18db8bb0c42e0065-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: __graphikMedium_Fallback_28a71b;
+    src: local("Arial");
+    ascent-override: 90.69%;
+    descent-override: 18.03%;
+    line-gap-override: 0.00%;
+    size-adjust: 108.17%
+}
+
+.__className_28a71b {
+    font-family: __graphikMedium_28a71b, __graphikMedium_Fallback_28a71b, Arial;
+    font-weight: 500;
+    font-style: normal
+}
+
+.__variable_28a71b {
+    --graphik-medium: "__graphikMedium_28a71b", "__graphikMedium_Fallback_28a71b", Arial
+}
+
+@font-face {
+    font-family: __graphikBold_847ab5;
+    src: url(https://reviews.static.gartner.com/_next/static/media/d38a85f4471f7aae-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: __graphikBold_Fallback_847ab5;
+    src: local("Arial");
+    ascent-override: 88.65%;
+    descent-override: 17.62%;
+    line-gap-override: 0.00%;
+    size-adjust: 110.66%
+}
+
+.__className_847ab5 {
+    font-family: __graphikBold_847ab5, __graphikBold_Fallback_847ab5, Arial;
+    font-weight: 700;
+    font-style: normal
+}
+
+.__variable_847ab5 {
+    --graphik-bold: "__graphikBold_847ab5", "__graphikBold_Fallback_847ab5", Arial
+}
+
+body {
+    font-family: var(--graphik-font);
+    min-width: 360px;
+    overflow: scroll;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+main {
+    flex-grow: 1
+}
+
+:root {
+    --color-brand-gartner-blue: #002856;
+    --color-brand-surf: #2bcdbc;
+    --color-brand-tangerine: #ed6926;
+    --color-brand-rose: #dd2161;
+    --color-brand-sky: #40b3e1;
+    --color-brand-lemon: #ffad1a;
+    --color-interaction-50: #91bbff;
+    --color-interaction-100: #6ca5ff;
+    --color-interaction-200: #478eff;
+    --color-interaction-500: #0000a9;
+    --color-interaction-600: #0000d3;
+    --color-interaction-700: #00007f;
+    --color-interaction-btn-500: #212932;
+    --color-success-50: #e6f6f1;
+    --color-success-100: #00a76d;
+    --color-success-200: #007a50;
+    --color-warning-50: #fef7e9;
+    --color-warning-100: #f5ab23;
+    --color-warning-200: #8d5a00;
+    --color-error-50: #fce7e6;
+    --color-error-100: #de0a01;
+    --color-error-200: #a00;
+    --color-neutral-000: #fff;
+    --color-neutral-100: #fcfcfc;
+    --color-neutral-200: #f6f7f9;
+    --color-neutral-300: #eff2f4;
+    --color-neutral-400: #e6eaee;
+    --color-neutral-500: #97a8b4;
+    --color-neutral-600: #5d7383;
+    --color-neutral-700: #2f3940;
+    --color-neutral-800: #000;
+    --color-neutral-text-grey-7: #212932;
+    --color-neutral-text-grey-5: #9b9b9b;
+    --gartner-font: var(--graphik-font);
+    --fontSize-labels-metadata-meta-default: 16px;
+    --fontsize-headings-h2: 36px;
+    --fontsize-mobile-h3: 26px;
+    --fontsize-paragraph-p-default: 16px;
+    --fontSize-labels-metadata-meta-lg: 16px;
+    --fontSize-tablets-h6: 18px;
+    --fontSize-labels-metadata-meta-xs: 10px;
+    --fontSize-labels-metadata-meta-sm: 12px;
+    --line-height-labels-metadata-meta-xxs: 27px;
+    --line-height-headings-h2: 50px;
+    --line-height-mobile-h3: 39px;
+    --line-height-paragraph-p-default: 27px;
+    --line-height-paragraphp-sm: 24px;
+    --line-height-mobile-h6: 27px;
+    --line-height-labels-metadata-meta-xs: 17px;
+    --modal-overlay: rgba(0, 0, 0, .5);
+    --padding-4: 16px;
+    --padding-6: 24px;
+    --padding-10: 40px;
+    --max-paragraph-width: 920px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --corner-radius-default: 4px;
+    --corner-radius-lg: 8px
+}

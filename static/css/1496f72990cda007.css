@@ -1,0 +1,13 @@
+@font-face {
+    font-family: __materialIcons_a24987;
+    src: url(https://reviews.static.gartner.com/_next/static/media/3738896408f4b04e.p.woff2) format("woff2");
+    font-display: block
+}
+
+.__className_a24987 {
+    font-family: __materialIcons_a24987
+}
+
+.__variable_a24987 {
+    --material-icons: "__materialIcons_a24987"
+}
