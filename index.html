@@ -86,6 +86,21 @@
             margin-top: 10px;
             text-decoration: underline;
         }
+
+        .disclaimers {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            /* Display only 2 lines initially */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .disclaimers.expanded {
+            -webkit-line-clamp: unset;
+            /* Remove the line clamp */
+            overflow: visible;
+        }
     </style>
 </head>
 
@@ -1325,11 +1340,7 @@
                 <h2 class="products-section_productHeading__hQMum">Product Listings</h2>
                 <div role="none" class="products-section_tabPanel__Dg6KW">
 
-                    <!-- <div class="products-section_resultCountIndicator__Fm_DB" aria-label="Result Count">Products 1 - 20
-                        of 75</div> -->
-
                     <div class="products-section_products__l18WQ" role="none">
-
 
                         <div class="product-card_productCard__ycxaH">
                             <div class="product-card_header__KqXhv">
@@ -1379,12 +1390,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
-                                <div role="none" class="product-card_cchoiceRow__wb2Xa"><a
-                                        class="product-card_cchoice__yf87e" href="#" target="_blank"><img role="none"
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
                                             src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
-                                            alt="" height="25"><span>customers choice<!-- --> <!-- -->2024</span></a>
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
                                 </div>
-
                             </div>
 
                             <div class="product-card_tabs__yOl0A">
@@ -1397,7 +1418,8 @@
                             <!-- Overview content -->
                             <div class="product-card_content__xuXh7" id="overview-content">
                                 <div class="truncated-text_truncatedText__Yttoh">
-                                    <span id="overview-text">Founded more than 20 years ago in Sunnyvale, California,
+                                    <span id="disclaimer" class="disclaimers">Founded more than 20 years
+                                        ago in Sunnyvale, California,
                                         Fortinet continues to be a driving force in the evolution of cybersecurity and
                                         the convergence of networking and security. Securing people, devices, and data
                                         everywhere is our mission. To that end, our portfolio of over 50
@@ -1405,6 +1427,7 @@
                                         delivering proven cybersecurity everywhere you need it. More than 680,000
                                         customers trust Fortinet solutions, which are among the most deployed, most
                                         patented, and most validated in the industry.</span>
+                                    <button id="toggleButton">Show More</button>
 
                                 </div>
                                 <div class="product-card_showMore__W7IqJ">
@@ -1609,6 +1632,23 @@
                                         </svg><a href="" class="product-card_ratingsCount__pj7eB">(<!-- -->1723<!-- -->
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
+
+                                </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1621,15 +1661,16 @@
 
                             <div class="product-card_content__xuXh7" id="overview-content">
                                 <div class="truncated-text_truncatedText__Yttoh">
-                                    <span id="overview-text">Founded more than 20 years ago in Sunnyvale, California,
-                                        Fortinet continues to be a driving force in the evolution of cybersecurity and
-                                        the convergence of networking and security. Securing people, devices, and data
-                                        everywhere is our mission. To that end, our portfolio of over 50
-                                        enterprise-grade products is the largest integrated offering available,
-                                        delivering proven cybersecurity everywhere you need it. More than 680,000
-                                        customers trust Fortinet solutions, which are among the most deployed, most
-                                        patented, and most validated in the industry.</span>
-
+                                    <span id="disclaimer" class="disclaimers">Check Point Software Technologies Ltd. is
+                                        a company that
+                                        offers cyber security solutions to governmental and business entities around the
+                                        world. The company's solutions are designed to safeguard against a variety of
+                                        cyber threats including malware and ransomware. With Check Point's multilevel
+                                        security architecture, dubbed 'Infinity Total Protection with Gen V advanced
+                                        threat prevention', cloud, network, and mobile devices of businesses are
+                                        protected. Additionally, Check Point provides a comprehensive and easy-to-manage
+                                        control security management system.</span>
+                                    <button id="toggleButton">Show More</button>
                                 </div>
                                 <div class="product-card_showMore__W7IqJ">
                                     Show Less Details
@@ -1832,6 +1873,23 @@
                                         </svg><a href="" class="product-card_ratingsCount__pj7eB">(<!-- -->1026<!-- -->
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
+
+                                </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1842,7 +1900,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Cisco is a company that
+                                <div class="truncated-text_truncatedText__Yttoh">
+                                    <span id="disclaimer" class="disclaimers">Cisco is a company that
                                         specializes in networking technologies, particularly Internet Protocol
                                         (IP)-based solutions. It was established in 1984 by a group of computer
                                         scientists from Stanford University. As of today, Cisco has a global workforce,
@@ -1852,7 +1911,10 @@
                                         storage area networking, and wireless technology. Moreover, Cisco extends its
                                         expertise to offer a sweeping range of services such as technical support and
                                         advanced services. The company sells its products and services on an enterprise
-                                        level, to commercial businesses, service providers, and end-users.</span></div>
+                                        level, to commercial businesses, service providers, and end-users.
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -2053,10 +2115,21 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
-                                <div role="none" class="product-card_cchoiceRow__wb2Xa"><a
-                                        class="product-card_cchoice__yf87e" href="#" target="_blank"><img role="none"
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
                                             src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
-                                            alt="" height="25"><span>customers choice<!-- --> <!-- -->2024</span></a>
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
@@ -2066,7 +2139,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Sophos is a global provider of
+                                <div class="truncated-text_truncatedText__Yttoh">
+                                    <span id="disclaimer" class="disclaimers">Sophos is a global provider of
                                         advanced cybersecurity solutions. Their main focus is the delivery of an
                                         extensive range of security technologies including Managed Detection and
                                         Response (MDR), incident response services, as well as endpoint, network, email,
@@ -2079,7 +2153,10 @@
                                         intelligence unit. The unit enriches the Sophos Adaptive Cybersecurity Ecosystem
                                         by optimizing its centralized data lake with a powerful set of open APIs.
                                         Sophos' operations are globally distributed and the company's headquarters are
-                                        in Oxford, U.K.</span></div>
+                                        in Oxford, U.K.
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -2244,8 +2321,7 @@
                                     <h3 class="product-card_productTitle__Q1UiA"><a
                                             href="network-firewalls/vendor/cisco-systems/product/meraki-mx-appliances">Cisco
                                             Meraki MX appliances</a></h3>
-                                    <p class="product-card_vendor__cxPip"><a ""
-                                            network-firewalls/vendor/cisco-systems">By <!-- -->Cisco Systems</a>
+                                    <p class="product-card_vendor__cxPip"><a href="#">By <!-- -->Cisco Systems</a>
                                     </p>
                                     <div class="product-card_rating__FxMfl">
                                         <div>4.5</div><svg xmlns="http://www.w3.org/2000/svg" width="97.81"
@@ -2284,6 +2360,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -2292,7 +2384,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Cisco is a company that
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Cisco is a company that
                                         specializes in networking technologies, particularly Internet Protocol
                                         (IP)-based solutions. It was established in 1984 by a group of computer
                                         scientists from Stanford University. As of today, Cisco has a global workforce,
@@ -2302,7 +2395,9 @@
                                         storage area networking, and wireless technology. Moreover, Cisco extends its
                                         expertise to offer a sweeping range of services such as technical support and
                                         advanced services. The company sells its products and services on an enterprise
-                                        level, to commercial businesses, service providers, and end-users.</span></div>
+                                        level, to commercial businesses, service providers, and end-users.</span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -2501,6 +2596,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -2509,7 +2620,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Huawei is a global provider of
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Huawei is a global provider of
                                         information and communications technology (ICT) solutions. The company's main
                                         focus is to enrich human progress through innovative technologies. Huawei aims
                                         to ensure that connectivity is a basic need, emphasizing the importance of
@@ -2520,7 +2632,9 @@
                                         Huawei has a significant global presence. The company's objective is to
                                         digitally connect every person, home, and organization in order to achieve a
                                         comprehensive connected, intelligent world. Through this, Huawei works to narrow
-                                        the digital gap, facilitating access to broadband services.</span></div>
+                                        the digital gap, facilitating access to broadband services.</span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -2722,6 +2836,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -2730,7 +2860,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>SonicWall has a three-decade long
+                                <div class="truncated-text_truncatedText__Yttoh">
+                                    <span id="disclaimer" class="disclaimers">SonicWall has a three-decade long
                                         presence in the cybersecurity industry, providing defense solutions for
                                         businesses of various sizes globally. SonicWall's prime solution offering
                                         involves detecting and preventing real-time breaches. These services are based
@@ -2739,7 +2870,10 @@
                                         security of their mobile and business networks, along with applications, emails,
                                         and data. SonicWall is notable for its extensive global business operations,
                                         serving approximately 500,000 businesses across 215 countries and territories
-                                        worldwide. The company was initially established in 1991.</span></div>
+                                        worldwide. The company was initially established in 1991.
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -2940,6 +3074,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -2948,7 +3098,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>WatchGuard Technologies, Inc. is
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">WatchGuard Technologies, Inc. is
                                         a global company focusing on cybersecurity. It presents a Unified Security
                                         Platform approach, especially designed for managed service providers. This
                                         unique design aims to amplify their business scale and speed, while
@@ -2959,7 +3110,10 @@
                                         platform comprises five core features: comprehensive security, shared knowledge,
                                         clarity and control, operational alignment, and automation. The company holds
                                         its headquarters in Seattle, Washington, and has worldwide establishments in
-                                        North America, Europe, the Asia Pacific, and Latin America.</span></div>
+                                        North America, Europe, the Asia Pacific, and Latin America.
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -3162,6 +3316,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -3170,7 +3340,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Juniper Networks, a Silicon
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Juniper Networks, a Silicon
                                         Valley-based technology company, was founded approximately two decades ago by
                                         Pradeep Sindhu, Dennis Ferguson, and Bjorn Liencres. The aim of the company is
                                         to develop innovative products and solutions specifically designed to meet the
@@ -3183,7 +3354,8 @@
                                         educational institutions. Juniper believes in the information superpower of
                                         networking and fosters innovation to connect ideas and enable human potential.
                                         They aim to develop a network that is intelligent, agile, secure, and open to
-                                        all vendors and network environments.</span></div>
+                                        all vendors and network environments.</span><button id="toggleButton">Show
+                                        More</button></div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -3384,6 +3556,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -3392,11 +3580,13 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Barracuda helps secure
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Barracuda helps secure
                                         organizations worldwide by delivering access to cloud-first, enterprise-grade
                                         security solutions that are easy to buy, deploy, and use. The Barracuda
                                         portfolio of products protects email, networks, data, and applications with
-                                        solutions that...</span></div>
+                                        solutions that grow and adapt as the customer’s needs evolve.</span><button
+                                        id="toggleButton">Show More</button></div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -3601,6 +3791,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -3609,12 +3815,18 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Microsoft enables digital
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Microsoft enables digital
                                         transformation for the era of an intelligent cloud and an intelligent edge. Its
                                         mission is to empower every person and every organization on the planet to
-                                        achieve more. Microsoft is dedicated to...</span></div>
+                                        achieve more. Microsoft is dedicated to advancing human and organizational
+                                        achievement. Microsoft Security helps protect people and data against
+                                        cyberthreats to give peace of mind.
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
-                                        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        xmlns="http://www.w3.org/2000/svg" height="24px" vie wBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
                                         <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"></path>
                                     </svg></div>
@@ -3818,6 +4030,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -3826,7 +4054,9 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>SonicWall has a three-decade long
+                                <div class="truncated-text_truncatedText__Yttoh">
+                                    <span id="disclaimer" class="disclaimers">
+                                        SonicWall has a three-decade long
                                         presence in the cybersecurity industry, providing defense solutions for
                                         businesses of various sizes globally. SonicWall's prime solution offering
                                         involves detecting and preventing real-time breaches. These services are based
@@ -3835,7 +4065,10 @@
                                         security of their mobile and business networks, along with applications, emails,
                                         and data. SonicWall is notable for its extensive global business operations,
                                         serving approximately 500,000 businesses across 215 countries and territories
-                                        worldwide. The company was initially established in 1991.</span></div>
+                                        worldwide. The company was initially established in 1991.
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -4041,6 +4274,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -4049,7 +4298,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Palo Alto Networks is a global
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Palo Alto Networks is a global
                                         cybersecurity organization shaping the future of cloud-centric technology. The
                                         main business objective is to provide effective cybersecurity solutions,
                                         maintaining and valuing the digital way of life. It addresses the significant
@@ -4059,7 +4309,9 @@
                                         platform and bolstering a burgeoning ecosystem of collaborators, it assures
                                         protection across various platforms including clouds, networks, and mobile
                                         devices. The organization envisions a progressively safe and secure digital
-                                        world each day.</span></div>
+                                        world each day.</span>
+                                    <button id="toggleButton">show more</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -4213,9 +4465,6 @@
                             </div>
                         </div>
 
-
-                        <!-- New -->
-
                         <div class="product-card_productCard__ycxaH">
                             <div class="product-card_header__KqXhv">
                                 <div class="product-card_productHeader__kcYiF"><a
@@ -4226,10 +4475,10 @@
                                             style="color: transparent; object-fit: contain;"
                                             src="/imagesrv/apps/peerinsights/images/vendors/logos/forcepoint_1626881454436.webp"></a>
                                     <h3 class="product-card_productTitle__Q1UiA"><a
-                                            href="network-firewalls/vendor/sophos/product/sophos-sg-utm-legacy">Sophos
-                                            SG UTM (Legacy)</a></h3>
+                                            href="network-firewalls/vendor/sophos/product/sophos-sg-utm-legacy">Forcepoint
+                                            Next-Gen Firewall</a></h3>
                                     <p class="product-card_vendor__cxPip"><a href="network-firewalls/vendor/sophos">By
-                                            <!-- -->Sophos</a></p>
+                                            Forcepoint</a></p>
                                     <div class="product-card_rating__FxMfl">
                                         <div>4.5</div><svg xmlns="http://www.w3.org/2000/svg" width="97.81"
                                             height="18.615">
@@ -4267,10 +4516,21 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
-                                <div role="none" class="product-card_cchoiceRow__wb2Xa"><a
-                                        class="product-card_cchoice__yf87e" href="#" target="_blank"><img role="none"
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
                                             src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
-                                            alt="" height="25"><span>customers choice<!-- --> <!-- -->2024</span></a>
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
@@ -4280,11 +4540,22 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Forcepoint’s mission is to foster
+                                <div class="truncated-text_truncatedText__Yttoh">
+                                    <span id="disclaimer" class="disclaimers">Forcepoint’s mission is to foster
                                         safe and trusting environments through a comprehensive security solution that
                                         understands digital identities and their cyber behaviors to protect employees
-                                        and critical data everywhere. Forcepoint achieves this mission by
-                                        simplifying...</span></div>
+                                        and critical data everywhere. Forcepoint achieves this mission by simplifying
+                                        security for global businesses and governments. The company’s all-in-one, truly
+                                        cloud-native platform makes it easy to adopt Zero Trust, Security Service Edge
+                                        (SSE), and Secure Access Service Edge (SASE), by preventing the theft or loss of
+                                        sensitive data and intellectual property no matter where people are working.
+                                        Rather than offering a static one-size fits all approach, Forcepoint solutions
+                                        inherently understand how people interact with data, providing secure access
+                                        while enabling employees to create value. Forcepoint creates safe, trusted
+                                        environments for customers and their employees to achieve their highest
+                                        potential while reducing risk.</span><button id="toggleButton">Show
+                                        More</button>
+                                </div>
                                 <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- --> Details<!-- --> <svg
                                         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                                         width="24px" fill="#0000A9">
@@ -4439,8 +4710,6 @@
                             </div>
                         </div>
 
-                        <!-- end -->
-
                         <div class="product-card_productCard__ycxaH">
                             <div class="product-card_header__KqXhv">
                                 <div class="product-card_productHeader__kcYiF"><a href="#"
@@ -4486,6 +4755,22 @@
                                             </g>
                                         </svg><a href="#" class="product-card_ratingsCount__pj7eB">(<!-- -->108<!-- -->
                                             <!-- -->Ratings<!-- -->)</a>
+                                    </div>
+                                </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
                                     </div>
                                 </div>
                             </div>
@@ -4697,6 +4982,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -4706,7 +5007,8 @@
                             </div>
 
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Check Point Software
+                                <div class="truncated-text_truncatedText__Yttoh">
+                                    <span id="disclaimer" class="disclaimers">Check Point Software
                                         Technologies
                                         Ltd. is a company that offers cyber security solutions to governmental
                                         and
@@ -4722,65 +5024,62 @@
                                         a
                                         comprehensive and easy-to-manage control security management
                                         system.
-                                        <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- -->
-                                            Details<!-- --> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                                                viewBox="0 -960 960 960" width="24px" fill="#0000A9">
-                                                <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z">
-                                                </path>
-                                            </svg></div>
-                                        <div class="product-card_moreContent__1_T3V">
-                                            <div class="product-card_subsection__F7lSz">
-                                                <h4 class="product-card_subsectionTitle__eJB3d">Ratings
-                                                    Breakdown</h4>
-                                                <dl class="ratings-histogram_histogram__jGoWZ">
-                                                    <dt class="ratings-histogram_desc__EZBba">5 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 61%;"></div>
-                                                    </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">61%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">4 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 36%;"></div>
-                                                    </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">36%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">3 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 3%;"></div>
-                                                    </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">3%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">2 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 0%;"></div>
-                                                    </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">0%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">1 Star</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 0%;"></div>
-                                                    </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">0%</dd>
-                                                </dl>
+                                    </span>
+                                    <button id="toggleButton">Show More</button>
+                                </div>
+                                <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- -->
+                                    Details<!-- --> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                        viewBox="0 -960 960 960" width="24px" fill="#0000A9">
+                                        <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z">
+                                        </path>
+                                    </svg></div>
+                                <div class="product-card_moreContent__1_T3V">
+                                    <div class="product-card_subsection__F7lSz">
+                                        <h4 class="product-card_subsectionTitle__eJB3d">Ratings
+                                            Breakdown</h4>
+                                        <dl class="ratings-histogram_histogram__jGoWZ">
+                                            <dt class="ratings-histogram_desc__EZBba">5 Stars</dt>
+                                            <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                <div class="ratings-histogram_bluebar__Ni_e8" style="width: 61%;"></div>
                                             </div>
-                                            <div class="product-card_subsection__F7lSz">
-                                                <h4 class="product-card_subsectionTitle__eJB3d">From Our
-                                                    Reviewers</h4>
-                                                <ul class="product-card_reviews__ZqSnI">
-                                                    <li class="product-card_reviewItem__HdDY_">“Advanced Threat
-                                                        Protection Meets
-                                                        Compliance Monitoring with CloudGuard”</li>
-                                                    <li class="product-card_reviewItem__HdDY_">“Securing
-                                                        Multi-Cloud Systems
-                                                        using Check Point Cloud Guard”</li>
-                                                    <li class="product-card_reviewItem__HdDY_">“Securing Cloud
-                                                        Environments: An
-                                                        In-depth Look at Checkpoint CloudGuard”</li>
-                                                </ul>
+                                            <dd class="ratings-histogram_val__lMSXP">61%</dd>
+                                            <dt class="ratings-histogram_desc__EZBba">4 Stars</dt>
+                                            <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                <div class="ratings-histogram_bluebar__Ni_e8" style="width: 36%;"></div>
                                             </div>
-                                        </div>
+                                            <dd class="ratings-histogram_val__lMSXP">36%</dd>
+                                            <dt class="ratings-histogram_desc__EZBba">3 Stars</dt>
+                                            <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                <div class="ratings-histogram_bluebar__Ni_e8" style="width: 3%;"></div>
+                                            </div>
+                                            <dd class="ratings-histogram_val__lMSXP">3%</dd>
+                                            <dt class="ratings-histogram_desc__EZBba">2 Stars</dt>
+                                            <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                <div class="ratings-histogram_bluebar__Ni_e8" style="width: 0%;"></div>
+                                            </div>
+                                            <dd class="ratings-histogram_val__lMSXP">0%</dd>
+                                            <dt class="ratings-histogram_desc__EZBba">1 Star</dt>
+                                            <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                <div class="ratings-histogram_bluebar__Ni_e8" style="width: 0%;"></div>
+                                            </div>
+                                            <dd class="ratings-histogram_val__lMSXP">0%</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="product-card_subsection__F7lSz">
+                                        <h4 class="product-card_subsectionTitle__eJB3d">From Our
+                                            Reviewers</h4>
+                                        <ul class="product-card_reviews__ZqSnI">
+                                            <li class="product-card_reviewItem__HdDY_">“Advanced Threat
+                                                Protection Meets
+                                                Compliance Monitoring with CloudGuard”</li>
+                                            <li class="product-card_reviewItem__HdDY_">“Securing
+                                                Multi-Cloud Systems
+                                                using Check Point Cloud Guard”</li>
+                                            <li class="product-card_reviewItem__HdDY_">“Securing Cloud
+                                                Environments: An
+                                                In-depth Look at Checkpoint CloudGuard”</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Alternatives content (Initially hidden) -->
@@ -4884,7 +5183,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="product-card_productCard__ycxaH">
@@ -4935,6 +5233,22 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
+                                            src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
                                 <button class="product-card_tab__VNOQM" aria-selected="true"
@@ -4943,7 +5257,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Hillstone Networks is a
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Hillstone Networks is a
                                         cybersecurity firm providing comprehensive digital protection to over 28,000
                                         enterprises globally. The company delivers integrative cybersecurity
                                         solutions
@@ -4953,64 +5268,66 @@
                                         and consolidation in different technological environments, regardless of the
                                         workload's location. Hillstone Networks’ array of cybersecurity solutions
                                         focuses on the crucial aspect of securing digital transformation.
-                                        <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- -->
-                                            Details<!-- --> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                                                viewBox="0 -960 960 960" width="24px" fill="#0000A9">
-                                                <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z">
-                                                </path>
-                                            </svg></div>
-                                        <div class="product-card_moreContent__1_T3V">
-                                            <div class="product-card_subsection__F7lSz">
-                                                <h4 class="product-card_subsectionTitle__eJB3d">Ratings Breakdown
-                                                </h4>
-                                                <dl class="ratings-histogram_histogram__jGoWZ">
-                                                    <dt class="ratings-histogram_desc__EZBba">5 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 79%;"></div>
+                                    </span>
+                                    <button id="toggleButton">show more</button>
+                                    <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- -->
+                                        Details<!-- --> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                            viewBox="0 -960 960 960" width="24px" fill="#0000A9">
+                                            <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="product-card_moreContent__1_T3V">
+                                        <div class="product-card_subsection__F7lSz">
+                                            <h4 class="product-card_subsectionTitle__eJB3d">Ratings Breakdown
+                                            </h4>
+                                            <dl class="ratings-histogram_histogram__jGoWZ">
+                                                <dt class="ratings-histogram_desc__EZBba">5 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 79%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">79%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">4 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 19%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">79%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">4 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 19%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">19%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">3 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 2%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">19%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">3 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 2%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">2%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">2 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 0%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">2%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">2 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 0%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">0%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">1 Star</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 0%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">0%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">1 Star</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 0%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">0%</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="product-card_subsection__F7lSz">
-                                                <h4 class="product-card_subsectionTitle__eJB3d">From Our Reviewers
-                                                </h4>
-                                                <ul class="product-card_reviews__ZqSnI">
-                                                    <li class="product-card_reviewItem__HdDY_">“assessment after
-                                                        long term use
-                                                        product this hillstone e-series fir ewall”</li>
-                                                    <li class="product-card_reviewItem__HdDY_">“Overall is good in
-                                                        terms of
-                                                        features and appearance”</li>
-                                                    <li class="product-card_reviewItem__HdDY_">“Become the best
-                                                        NGFW”</li>
-                                                </ul>
-                                            </div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">0%</dd>
+                                            </dl>
                                         </div>
+                                        <div class="product-card_subsection__F7lSz">
+                                            <h4 class="product-card_subsectionTitle__eJB3d">From Our Reviewers
+                                            </h4>
+                                            <ul class="product-card_reviews__ZqSnI">
+                                                <li class="product-card_reviewItem__HdDY_">“assessment after
+                                                    long term use
+                                                    product this hillstone e-series fir ewall”</li>
+                                                <li class="product-card_reviewItem__HdDY_">“Overall is good in
+                                                    terms of
+                                                    features and appearance”</li>
+                                                <li class="product-card_reviewItem__HdDY_">“Become the best
+                                                    NGFW”</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -5019,13 +5336,13 @@
                                 <div class="product-card_cards__NEMjL" style="display: flex;">
                                     <div>
                                         <div class="product-card-alternate_productCard__NXJ2T"><a href="
-                                                " class="product-card-alternate_logo__gRiy4"><img
+                                                    " class="product-card-alternate_logo__gRiy4"><img
                                                     alt="Logo of FortiGate: Next Generation Firewall (NGFW)"
                                                     loading="lazy" width="55" height="55" decoding="async" data-nimg="1"
                                                     src="/imagesrv/apps/peerinsights/images/vendors/logos/fortinet_enterprise-network-firewall.png"
                                                     style="color: transparent; object-fit: contain;"></a>
                                             <div class="product-card-alternate_product__W55Fx"><a href="
-                                                    " class="product-card-alternate_name__Ya_5A">FortiGate: Next
+                                                        " class="product-card-alternate_name__Ya_5A">FortiGate: Next
                                                     Generation
                                                     Firewall (NGFW)</a>
                                                 <div class="product-card-alternate_starRating__AmcEY">4.6 <svg
@@ -5060,7 +5377,7 @@
                                                                 fill="#ffad1a"></path>
                                                         </g>
                                                     </svg><a href="
-                                                        "
+                                                            "
                                                         class="product-card-alternate_rating__v37GM">(<span>2661</span><span
                                                             class="product-card-alternate_countLabel__9JNLb">
                                                             Ratings</span>)</a></div>
@@ -5166,10 +5483,21 @@
                                             <!-- -->Ratings<!-- -->)</a>
                                     </div>
                                 </div>
-                                <div role="none" class="product-card_cchoiceRow__wb2Xa"><a
-                                        class="product-card_cchoice__yf87e" href="#" target="_blank"><img role="none"
+                                <div role="none" class="product-card_cchoiceRow__wb2Xa"
+                                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <a class="product-card_cchoice__yf87e" href="#" target="_blank">
+                                        <img role="none"
                                             src="https://reviews.static.gartner.com/_next/static/media/CustomerChoiceBadgeIcon.0a53282b.png"
-                                            alt="" height="25"><span>customers choice<!-- --> <!-- -->2024</span></a>
+                                            alt="" height="25">
+                                        <span>customers choice<!-- --> <!-- -->2025</span>
+                                    </a>
+                                    <!-- New Responsive Price Range Section -->
+                                    <div class="product-card_priceRange__responsive"
+                                        style=" margin-top: 10px; font-size: 20px; color: #333;">
+                                        <span class="price-label" style="font-weight: bold;">Price Range:</span>
+                                        <span class="price-value" style="margin-left: 5px; color: #007bff;">$1000 -
+                                            $5000</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="product-card_tabs__yOl0A">
@@ -5179,7 +5507,8 @@
                                     id="alternatives-button">ALTERNATIVES</button>
                             </div>
                             <div class="product-card_content__xuXh7" id="overview-content">
-                                <div class="truncated-text_truncatedText__Yttoh"><span>Sophos is a global provider of
+                                <div class="truncated-text_truncatedText__Yttoh"><span id="disclaimer"
+                                        class="disclaimers">Sophos is a global provider of
                                         advanced cybersecurity solutions. Their main focus is the delivery of an
                                         extensive range of security technologies including Managed Detection and
                                         Response (MDR), incident response services, as well as endpoint, network, email,
@@ -5193,62 +5522,64 @@
                                         by optimizing its centralized data lake with a powerful set of open APIs.
                                         Sophos' operations are globally distributed and the company's headquarters are
                                         in Oxford, U.K.
-                                        <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- -->
-                                            Details<!-- --> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                                                viewBox="0 -960 960 960" width="24px" fill="#0000A9">
-                                                <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"></path>
-                                            </svg></div>
-                                        <div class="product-card_moreContent__1_T3V">
-                                            <div class="product-card_subsection__F7lSz">
-                                                <h4 class="product-card_subsectionTitle__eJB3d">Ratings Breakdown</h4>
-                                                <dl class="ratings-histogram_histogram__jGoWZ">
-                                                    <dt class="ratings-histogram_desc__EZBba">5 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 39%;"></div>
+                                    </span>
+                                    <button id="toggleButton"> show more</button>
+                                    <div class="product-card_showMore__W7IqJ">Show <!-- -->Less<!-- -->
+                                        Details<!-- --> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                            viewBox="0 -960 960 960" width="24px" fill="#0000A9">
+                                            <path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"></path>
+                                        </svg></div>
+                                    <div class="product-card_moreContent__1_T3V">
+                                        <div class="product-card_subsection__F7lSz">
+                                            <h4 class="product-card_subsectionTitle__eJB3d">Ratings Breakdown</h4>
+                                            <dl class="ratings-histogram_histogram__jGoWZ">
+                                                <dt class="ratings-histogram_desc__EZBba">5 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 39%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">39%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">4 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 53%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">39%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">4 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 53%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">53%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">3 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 7%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">53%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">3 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 7%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">7%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">2 Stars</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 1%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">7%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">2 Stars</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 1%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">1%</dd>
-                                                    <dt class="ratings-histogram_desc__EZBba">1 Star</dt>
-                                                    <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
-                                                        <div class="ratings-histogram_bluebar__Ni_e8"
-                                                            style="width: 1%;"></div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">1%</dd>
+                                                <dt class="ratings-histogram_desc__EZBba">1 Star</dt>
+                                                <div aria-hidden="true" class="ratings-histogram_bar__Ny2FA">
+                                                    <div class="ratings-histogram_bluebar__Ni_e8" style="width: 1%;">
                                                     </div>
-                                                    <dd class="ratings-histogram_val__lMSXP">1%</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="product-card_subsection__F7lSz">
-                                                <h4 class="product-card_subsectionTitle__eJB3d">From Our Reviewers</h4>
-                                                <ul class="product-card_reviews__ZqSnI">
-                                                    <li class="product-card_reviewItem__HdDY_">“Sophos UTM - great for
-                                                        expanding
-                                                        infrastructures and management”</li>
-                                                    <li class="product-card_reviewItem__HdDY_">“Very Good firewall at a
-                                                        Good
-                                                        price”</li>
-                                                    <li class="product-card_reviewItem__HdDY_">“Future generation
-                                                        security
-                                                        appliance”</li>
-                                                </ul>
-                                            </div>
+                                                </div>
+                                                <dd class="ratings-histogram_val__lMSXP">1%</dd>
+                                            </dl>
                                         </div>
+                                        <div class="product-card_subsection__F7lSz">
+                                            <h4 class="product-card_subsectionTitle__eJB3d">From Our Reviewers</h4>
+                                            <ul class="product-card_reviews__ZqSnI">
+                                                <li class="product-card_reviewItem__HdDY_">“Sophos UTM - great for
+                                                    expanding
+                                                    infrastructures and management”</li>
+                                                <li class="product-card_reviewItem__HdDY_">“Very Good firewall at a
+                                                    Good
+                                                    price”</li>
+                                                <li class="product-card_reviewItem__HdDY_">“Future generation
+                                                    security
+                                                    appliance”</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Alternatives content (Initially hidden) -->
@@ -5256,13 +5587,13 @@
                                 <div class="product-card_cards__NEMjL" style="display: flex;">
                                     <div>
                                         <div class="product-card-alternate_productCard__NXJ2T"><a href="
-                                                " class="product-card-alternate_logo__gRiy4"><img
+                                                    " class="product-card-alternate_logo__gRiy4"><img
                                                     alt="Logo of FortiGate: Next Generation Firewall (NGFW)"
                                                     loading="lazy" width="55" height="55" decoding="async" data-nimg="1"
                                                     src="/imagesrv/apps/peerinsights/images/vendors/logos/fortinet_enterprise-network-firewall.png"
                                                     style="color: transparent; object-fit: contain;"></a>
                                             <div class="product-card-alternate_product__W55Fx"><a href="
-                                                    " class="product-card-alternate_name__Ya_5A">FortiGate: Next
+                                                        " class="product-card-alternate_name__Ya_5A">FortiGate: Next
                                                     Generation
                                                     Firewall (NGFW)</a>
                                                 <div class="product-card-alternate_starRating__AmcEY">4.6 <svg
@@ -5297,7 +5628,7 @@
                                                                 fill="#ffad1a"></path>
                                                         </g>
                                                     </svg><a href="
-                                                        "
+                                                            "
                                                         class="product-card-alternate_rating__v37GM">(<span>2661</span><span
                                                             class="product-card-alternate_countLabel__9JNLb">
                                                             Ratings</span>)</a></div>
@@ -5354,8 +5685,10 @@
                                 </div>
                             </div>
                         </div>
-
-
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
     </main>
@@ -5375,17 +5708,19 @@
                     class="footer_home__i38GT"><img aria-hidden="true"
                         alt="Software reviews and ratings for EMMS, BI, CRM, MDM, analytics, security and other platforms - Peer Insights by Gartner"
                         loading="lazy" width="102" height="36" decoding="async" data-nimg="1" style="color:transparent"
-                        src="https://reviews.static.gartner.com/_next/static/media/GPI-logo.dc3a3fbc.svg"></a><a
+                        src="https://reviews.static.gartner.com/_next/static/media/GPI-logo.dc3a3fbc.svg"></a>
+                <!-- <a
                     href="#" target="_blank" aria-label="Link to Garter Peer Experiences LinkedIn profile"
                     class="footer_linkedin__Wakqw"><img aria-hidden="true" alt="" loading="lazy" width="32" height="32"
                         decoding="async" data-nimg="1" style="color:transparent"
                         srcset="/reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Flinkedin.8a021c69.png&amp;w=32&amp;q=70 1x, /reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Flinkedin.8a021c69.png&amp;w=64&amp;q=70 2x"
-                        src="/reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Flinkedin.8a021c69.png&amp;w=64&amp;q=70"></a><a
+                        src="/imagesrv/apps/peerinsights/"></a>
+                        <a
                     href="#" target="_blank" aria-label="Link to Garter Peer Experiences Twitter profile"
                     class="footer_twitter__dpZB3"><img aria-hidden="true" alt="" loading="lazy" width="32" height="32"
                         decoding="async" data-nimg="1" style="color:transparent"
                         srcset="/reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Ftwitter.da5127ac.png&amp;w=32&amp;q=70 1x, /reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Ftwitter.da5127ac.png&amp;w=64&amp;q=70 2x"
-                        src="/reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Ftwitter.da5127ac.png&amp;w=64&amp;q=70"></a>
+                        src="/reviews/_next/image?url=https%3A%2F%2Freviews.static.gartner.com%2F_next%2Fstatic%2Fmedia%2Ftwitter.da5127ac.png&amp;w=64&amp;q=70"></a> -->
             </nav>
             <div role="none" class="footer_secondRow__qYg8_">
                 <nav class="footer_linkList__nMCHG"><span role="none"><a href="#">Community
@@ -5402,43 +5737,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- <script>
-        // Function to toggle the visibility of "Show More" content dynamically
-        function toggleContent(event) {
-            const card = event.target.closest('.product-card_productCard__ycxaH'); // Find the closest parent card
-            const showMoreButton = card.querySelector('.truncated-text_fullTextToggle__3_gmx');
-            const moreContent = card.querySelector('.product-card_moreContent__1_T3V');
-
-            // Toggle between showing and hiding content based on current state
-            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
-                // If content is hidden or not yet set, show it and change button text
-                moreContent.style.display = 'block';
-                showMoreButton.innerHTML = 'Show Less'; // Change text to 'Show Less'
-            } else {
-                // If content is shown, hide it and change button text
-                moreContent.style.display = 'none';
-                showMoreButton.innerHTML = 'Show More'; // Change text to 'Show More'
-            }
-        }
-
-        // Attach event listeners to each product card's show more/less button
-        document.querySelectorAll('.truncated-text_fullTextToggle__3_gmx').forEach(button => {
-            button.addEventListener('click', toggleContent);
-        });
-
-        // Function to toggle the active tab
-        function toggleTab(event) {
-            const tabs = document.querySelectorAll('.product-card_tab__VNOQM');
-            tabs.forEach(tab => tab.setAttribute('aria-selected', 'false')); // Deactivate all tabs
-            event.target.setAttribute('aria-selected', 'true'); // Activate the clicked tab
-        }
-
-        // Attach event listeners to the tab buttons
-        document.querySelectorAll('.product-card_tab__VNOQM').forEach(tab => {
-            tab.addEventListener('click', toggleTab);
-        });
-    </script> -->
 
     <script>
         // Function to toggle the visibility of "Show More" content dynamically
@@ -5503,6 +5801,43 @@
                 }
             }
         });
+
+    </script>
+
+    <script>
+
+        Object.values(document.getElementsByClassName("product-card_content__xuXh7")).forEach((el, i) => {
+            const button = el.querySelector('#toggleButton'); // Select the button by its ID
+            const disclaimer = el.querySelector('#disclaimer'); // Select the disclaimer by its ID
+
+            if (button && disclaimer) {
+                button.addEventListener('click', function () {
+                    if (disclaimer.classList.contains('expanded')) {
+                        // If expanded, collapse the text
+                        disclaimer.classList.remove('expanded');
+                        button.textContent = 'Show More';
+                    } else {
+                        // If collapsed, expand the text
+                        disclaimer.classList.add('expanded');
+                        button.textContent = 'Show Less';
+                    }
+                });
+            }
+        });
+
+
+        // document.getElementById('toggleButton').addEventListener('click', function () {
+        //     const disclaimer = document.getElementById('disclaimer');
+        //     const button = this;
+
+        //     if (disclaimer.classList.contains('expanded')) {
+        //         disclaimer.classList.remove('expanded');
+        //         button.textContent = 'Show More';
+        //     } else {
+        //         disclaimer.classList.add('expanded');
+        //         button.textContent = 'Show Less';
+        //     }
+        // });
 
     </script>
 
