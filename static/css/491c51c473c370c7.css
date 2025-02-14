@@ -1,78 +1,90 @@
-@font-face {
-    font-family: __graphik_b42933;
-    src: url(https://reviews.static.gartner.com/_next/static/media/825583c72de2792d-s.p.woff2) format("woff2");
-    font-display: swap;
-    font-weight: 400;
-    font-style: normal
+:root {
+  --graphik-font: "__graphik_b42933", "__graphik_Fallback_b42933", Arial,
+    sans-serif;
 }
 
 @font-face {
-    font-family: __graphik_b42933;
-    src: url(https://reviews.static.gartner.com/_next/static/media/18db8bb0c42e0065-s.p.woff2) format("woff2");
-    font-display: swap;
-    font-weight: 500;
-    font-style: normal
+  font-family: __graphik_b42933;
+  src: url(https://reviews.static.gartner.com/_next/static/media/825583c72de2792d-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: __graphik_b42933;
-    src: url(https://reviews.static.gartner.com/_next/static/media/d38a85f4471f7aae-s.p.woff2) format("woff2");
-    font-display: swap;
-    font-weight: 700;
-    font-style: normal
+  font-family: __graphik_b42933;
+  src: url(https://reviews.static.gartner.com/_next/static/media/18db8bb0c42e0065-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: __graphik_b42933;
-    src: url(https://reviews.static.gartner.com/_next/static/media/687c116c152c7919-s.p.woff2) format("woff2");
-    font-display: swap;
-    font-weight: 400;
-    font-style: italic
+  font-family: __graphik_b42933;
+  src: url(https://reviews.static.gartner.com/_next/static/media/d38a85f4471f7aae-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: __graphik_b42933;
-    src: url(https://reviews.static.gartner.com/_next/static/media/948a9d1beefa280e-s.p.woff2) format("woff2");
-    font-display: swap;
-    font-weight: 500;
-    font-style: italic
+  font-family: __graphik_b42933;
+  src: url(https://reviews.static.gartner.com/_next/static/media/687c116c152c7919-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: __graphik_b42933;
-    src: url(https://reviews.static.gartner.com/_next/static/media/0ec6076fe421cf14-s.p.woff2) format("woff2");
-    font-display: swap;
-    font-weight: 700;
-    font-style: italic
+  font-family: __graphik_b42933;
+  src: url(https://reviews.static.gartner.com/_next/static/media/948a9d1beefa280e-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: __graphik_Fallback_b42933;
-    src: local("Arial");
-    ascent-override: 92.25%;
-    descent-override: 18.34%;
-    line-gap-override: 0.00%;
-    size-adjust: 106.34%
+  font-family: __graphik_b42933;
+  src: url(https://reviews.static.gartner.com/_next/static/media/0ec6076fe421cf14-s.p.woff2)
+    format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: __graphik_Fallback_b42933;
+  src: local("Arial");
+  ascent-override: 92.25%;
+  descent-override: 18.34%;
+  line-gap-override: 0%;
+  size-adjust: 106.34%;
 }
 
 .__className_b42933 {
-    font-family: __graphik_b42933, __graphik_Fallback_b42933, Arial
+  font-family: __graphik_b42933, __graphik_Fallback_b42933, Arial;
 }
 
 .__variable_b42933 {
-    --graphik-font: "__graphik_b42933", "__graphik_Fallback_b42933", Arial
+  --graphik-font: "__graphik_b42933", "__graphik_Fallback_b42933", Arial;
 }
 
 @font-face {
-    font-family: __glyphiconsHalflings_f69163;
-    src: url(https://reviews.static.gartner.com/_next/static/media/b70781972ce7320b.p.woff2) format("woff2");
-    font-display: block
+  font-family: __glyphiconsHalflings_f69163;
+  src: url(https://reviews.static.gartner.com/_next/static/media/b70781972ce7320b.p.woff2)
+    format("woff2");
+  font-display: block;
 }
 
 .__className_f69163 {
-    font-family: __glyphiconsHalflings_f69163
+  font-family: __glyphiconsHalflings_f69163;
 }
 
 .__variable_f69163 {
-    --glyphicons-halflings: "__glyphiconsHalflings_f69163"
+  --glyphicons-halflings: "__glyphiconsHalflings_f69163";
 }
